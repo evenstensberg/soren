@@ -1,0 +1,39 @@
+{
+  "name": "soren",
+  "version": "0.0.1",
+  "description": "stdin test runner",
+  "main": "index.js",
+  "bin": {
+    "soren": "./index.js"
+  },
+  "scripts": {
+    "lint": "eslint ./index.js && eslint ./lib && eslint ./example"
+  },
+  "engines": {
+    "node": ">=7"
+  },
+  "repository": "https://github.com/ev1stensberg/soren",
+  "keywords": [
+    "stdin",
+    "test",
+    "runner"
+  ],
+  "bugs": {
+    "url": "https://github.com/ev1stensberg/soren/issues"
+  },
+  "homepage": "https://github.com/ev1stensberg/soren#README",
+  "author": "Even Stensberg <evenstensberg@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.0.1",
+    "glob": "^7.1.2",
+    "global-prefix": "^0.1.5",
+    "mock-stdin": "^0.3.1",
+    "ora": "^1.3.0",
+    "strip-ansi": "^4.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.1.1",
+    "eslint-config-google": "^0.8.0"
+  }
+}
