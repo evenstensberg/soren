@@ -72,7 +72,7 @@ There's several things you may have noticed here. First of all, your interactive
 ## Tricks of the Trade
 
 1. Run Soren in a Docker container
-2. If you are producing code, leave that checks for tools like Jest and run that command after Soren has run it's command. (Example: `npm run E2E:soren && npm run E2E:jest`)
+2. If you are producing code, leave that checks for tools like Jest and run that command after Soren has run its command. (Example: `npm run E2E:soren && npm run E2E:jest`)
 
 ## Motivation
 
