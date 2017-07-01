@@ -1,13 +1,13 @@
 # Soren
 
-Soren is an minimal test runner designed to help E2E tests with interactive CLI tools such as an application using [Inquirer](https://github.com/SBoudrias/Inquirer.js). It's flaky and experimental, please submit any issues that you might encounter. 
+Soren is an minimal test runner designed to help E2E tests with interactive CLI tools such as an application using [Inquirer](https://github.com/SBoudrias/Inquirer.js). It's flaky and experimental, please submit any issues that you might encounter.
 
 ![alt-tag](https://github.com/ev1stensberg/soren/blob/master/assets/ex.png)
 
 # Usage
 
 ```sh
-$ npm install --save soren
+$ npm install -g soren
 
 soren binPath="./my/repo/dot.js" -- optionalArgs
 ```
@@ -69,7 +69,10 @@ ter to skip)`, 'enter', (answer) => {
 There's several things you may have noticed here. First of all, your interactive questions need to match exactly, as well as they have to be in order. Secondly, we're using the native [`assert`](https://nodejs.org/api/assert.html) module for node, while we figure out how to implement this nicely with other test runners.
 
 
+## Tricks of the Trade
 
+1. Run Soren in a Docker container
+2. If you are producing code, leave that checks for tools like Jest and run that command after Soren has run it's command. (Example: `npm run E2E:soren && npm run E2E:jest`)
 
 ## Motivation
 
