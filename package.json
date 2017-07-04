@@ -1,6 +1,6 @@
 {
   "name": "soren",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "description": "stdin test runner",
   "main": "index.js",
   "bin": {
