@@ -36,5 +36,5 @@ class Soren extends Runner {
 
 new Soren({
   binPath: binPathArgV,
-  arguments: argsArr.join(' ')
+  arguments: argsArr
 }).getFPS().run();
