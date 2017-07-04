@@ -12,6 +12,7 @@ $ npm install -g soren
 soren binPath="./my/repo/dot.js" -- optionalArgs
 ```
 
+
 # Example
 
 Example from a E2E test with the [webpack-cli](https://github.com/webpack/webpack-cli/)
@@ -24,7 +25,7 @@ const assert = require('assert');
 // Webpack-cli -> soren binPath="YourPathToWebpackCLI" -- init
 // Alternatively, clone webpack-cli and run 'Soren' inside the repo
 
-describe('webpack', () => {
+describe('init', () => {
   question('Will your application have multiple bundles? (Y/n)', 'n', (answer) => {
     assert.equal(answer, 'n');
   });
@@ -68,6 +69,12 @@ ter to skip)`, 'enter', (answer) => {
 
 There's several things you may have noticed here. First of all, your interactive questions need to match exactly, as well as they have to be in order. Secondly, we're using the native [`assert`](https://nodejs.org/api/assert.html) module for node, while we figure out how to implement this nicely with other test runners.
 
+## Important
+
+1. Filename for each of the tests needs to be named `example.stdin.js`
+2. When you're running `soren`, `describe` should have the argument you pass it, as well as the filename:
+  `soren binPath=../some/path -- example`
+3. Describe needs then to look like: `describe('example', () => {...})`
 
 ## Tricks of the Trade
 
