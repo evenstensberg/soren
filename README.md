@@ -12,6 +12,7 @@ $ npm install -g soren
 soren binPath="./my/repo/dot.js" -- optionalArgs
 ```
 
+
 # Example
 
 Example from a E2E test with the [webpack-cli](https://github.com/webpack/webpack-cli/)
@@ -24,7 +25,9 @@ const assert = require('assert');
 // Webpack-cli -> soren binPath="YourPathToWebpackCLI" -- init
 // Alternatively, clone webpack-cli and run 'Soren' inside the repo
 
-describe('webpack', () => {
+// describe has to match one of the arguments you pass to soren binPath=.. -- thisArg
+
+describe('init', () => {
   question('Will your application have multiple bundles? (Y/n)', 'n', (answer) => {
     assert.equal(answer, 'n');
   });
